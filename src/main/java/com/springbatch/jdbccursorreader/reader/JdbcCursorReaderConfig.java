@@ -13,6 +13,10 @@ import com.springbatch.jdbccursorreader.dominio.Cliente;
 
 @Configuration
 public class JdbcCursorReaderConfig {
+	
+	/**
+	 * Trabalhando com leitura de banco de dados utilizando cursores.
+	 */
 	@Bean
 	public JdbcCursorItemReader<Cliente> jdbcCursorReader(
 			@Qualifier("appDataSource") DataSource dataSource) {
@@ -23,4 +27,7 @@ public class JdbcCursorReaderConfig {
 				.rowMapper(new BeanPropertyRowMapper<Cliente>(Cliente.class))
 				.build();
 	}
+	
+	
+	
 }
