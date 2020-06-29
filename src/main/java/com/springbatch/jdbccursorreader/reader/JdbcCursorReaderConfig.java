@@ -26,8 +26,7 @@ public class JdbcCursorReaderConfig {
 				.sql("select * from cliente")
 				.rowMapper(new BeanPropertyRowMapper<Cliente>(Cliente.class))
 				.build();
-	}
-	
+	}	
 	
 	
 }
